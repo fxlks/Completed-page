@@ -340,11 +340,8 @@ p[data-category="Beef/Pork"] {
     gap: var(--grid-gap);
 }
 .categories_content_block {
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
 }
 
 .categories_content_block_text {
@@ -385,8 +382,9 @@ div[data-category="Dessert"] {
 }
 .categories_content_block_icon {
     display: flex;
+    align-self: center;
+    justify-content: center;
     align-content: center;
-    padding: 5px;
 }
 #vegicon {
     color: var(--category-veg);
@@ -442,14 +440,12 @@ div[data-category="Dessert"] {
 }
 
 .content_image_container {
-    background-color: var(--color-light);
-    width: var(--width-full);
-    grid-column: 8/span 4;
-    grid-row: 2;
-    border-radius:5px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    width: var(--width-12col);
+    gap: var(--grid-gap);
     margin: 0 auto;
-    align-content: space-around;
-    padding: 20px;
 }
 
 .content_image_text_block {
@@ -481,19 +477,20 @@ div[data-category="Dessert"] {
 }
 
 .kitchen_headline { 
-    color: var(--color-white);
+    color: var(--color-light); 
     height: 60px;
     border-bottom: 1px solid var(--color-white);
     text-transform: uppercase;
-    font-weight:700;
+    font-weight: 700;
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-self: flex-start;
-    margin: 70px auto 0 auto;
-    width: var(--width-12col);
-    font-size: 50px;
+    margin: 0 auto;
+    width: var(--width-12col); 
+    font-size: 37px;
     text-shadow: 1px 1px 3px var(--background-color-dark-bg);
-    padding-bottom: 9px;
+    margin-top: 86px;
 }
 
 .kitchen_container {
@@ -505,12 +502,11 @@ div[data-category="Dessert"] {
 
 
 .kitchen_container_text {
-    background-color: var(--color-light);
-    color: var(--color_dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding:79px 186px 89px 93px;
+    background-color: var(--bacground-color-light);
+    color: var(--background-color-navigation);
+    text-align: center; 
+    margin: 0;
+    flex: 1; 
 }
 
 .kitchen_container_text p{
@@ -532,20 +528,16 @@ div[data-category="Dessert"] {
     align-items: center;
     height: 100%;
     background-color: var(--background-color-dark-bg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 }
 
 .kitchen_buttons{
     background-color: var(--color-dark);
     border: 1px solid var(--bacground-color-light);
+    padding: 8px 16px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 700;
     cursor: pointer;
-    padding: 10px 53px 9px 53px; 
-    
 }
 
 /* Recipe_page */
@@ -1167,6 +1159,7 @@ button:hover{
     margin-right: 10px;
 }
 
+
 @media (width <768px) {
 
     :root {
@@ -1215,7 +1208,7 @@ button:hover{
     .content_area_headline {
         font-size: 25px;
     }
-    #img-recipe {
+    .image-box img {
         display: none;
     }
 
@@ -1233,12 +1226,8 @@ button:hover{
     .categories_content_block_text p {
         font-size: 14px;
     }
-    .footer_container {
-        gap: 10px;
-    }
-    .footer-text {
-        font-size: 10px;
-    }
- } 
 
-   
+
+
+
+}
