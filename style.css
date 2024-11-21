@@ -510,7 +510,7 @@ div[data-category="Dessert"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:79px 186px 89px 93px; 
+    padding:79px 186px 89px 93px;
 }
 
 .kitchen_container_text p{
@@ -532,6 +532,9 @@ div[data-category="Dessert"] {
     align-items: center;
     height: 100%;
     background-color: var(--background-color-dark-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .kitchen_buttons{
